@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-def find_new_transactions(source_csv="transaction_ids.csv", master_csv="all_transactions.csv", output_csv="new_transactions_only.csv"):
+def find_new_transactions(source_csv="transaction_ids.csv", master_csv="transactions.csv", output_csv="new_transactions_only.csv"):
     transactions_df = pd.read_csv(source_csv)
     transactions_df.columns = [col.lower() for col in transactions_df.columns]  # Normalize
 
